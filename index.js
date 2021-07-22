@@ -10,6 +10,14 @@ app.get('/', (req,res) => {
   res.send(`Hello World! This is runnung on ${hostname}`)
 })
 
+app.get('/page1',() => {
+  res.send(`/pages1 This is runnung on ${hostname}`)
+})
+
+app.get('/page2',() => {
+  res.send(`/pages2 This is runnung on ${hostname}`)
+})
+
 app.get('/probe',(req, res)=>{
   const now = new Date()
   const timePassed = now - date
