@@ -6,16 +6,18 @@ const date = new Date()
 
 app.get('/', (req,res) => {
 
-  const hostname = os.hostname()  
+  const hostname = os.hostname()
   res.send(`Hello World! This is runnung on ${hostname}`)
 })
 
-app.get('/page1',() => {
-  res.send(`/pages1 This is runnung on ${hostname}`)
+app.get('/page1',(req, res) => {
+  const hostname = os.hostname()
+  res.send(`/page1 This is runnung on ${hostname}`)
 })
 
-app.get('/page2',() => {
-  res.send(`/pages2 This is runnung on ${hostname}`)
+app.get('/page2',(req, res) => {
+  const hostname = os.hostname()
+  res.send(`/page2 This is runnung on ${hostname}`)
 })
 
 app.get('/probe',(req, res)=>{
